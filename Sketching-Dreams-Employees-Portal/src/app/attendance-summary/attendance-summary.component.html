@@ -1,0 +1,24 @@
+<div class="container ">
+  <br>
+  <!-- <p>
+    attendance-summary works!
+  </p> -->
+  <div class="row">
+    <div class="col-lg-6 m-auto">
+      <div>
+        <button class="btn btn-primary" (click)= "getChartDataAndLabels()" [disabled]="!buttonFlag">Show Report</button>
+        <br>
+        <div style="display: block" *ngIf = "!buttonFlag" class="divmargin">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabel"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.top-border{
+    background-color: teal;
+    color: #fff;
+   
+}
+.heading{
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.para{
+    font-size: 18px;
+    padding-bottom: 10px;
+}

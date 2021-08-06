@@ -1,0 +1,40 @@
+            <div class="container-fluid">
+                <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-7 m-auto">
+                        <nav mat-tab-nav-bar>
+                            <a mat-tab-link
+                            [routerLink]="['/emplist']"
+                            routerLinkActive #rla1="routerLinkActive"
+                            [active]="rla1.isActive"
+                            [ngStyle]="{backgroundColor: rla1.isActive ? 'teal': ''}">
+                            Employee List
+                            </a>
+                            <a mat-tab-link
+                            [routerLink]="['/markattendance']"
+                            routerLinkActive #rla2="routerLinkActive"
+                            [active]="rla2.isActive"
+                            [ngStyle]="{backgroundColor: rla2.isActive ? 'teal': 'transparent'}">
+                            Mark Attendance
+                            </a>
+                            <a mat-tab-link
+                            [routerLink]="['/empdetails']"
+                            routerLinkActive #rla3="routerLinkActive"
+                            [active]="rla3.isActive"
+                            [ngStyle]="{backgroundColor: rla3.isActive ? 'teal': 'transparent'}">
+                            Employee Details
+                            </a>
+                            <a mat-tab-link
+                            [routerLink]="['/attendancesummary']"
+                            routerLinkActive #rla4="routerLinkActive"
+                            [active]="rla4.isActive"
+                            [ngStyle]="{backgroundColor: rla4.isActive ? 'teal': 'transparent'}">
+                            Summary
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <router-outlet></router-outlet>
